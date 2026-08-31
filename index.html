@@ -31,6 +31,17 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v4a2 2 0 0 1-2 2C9.6 21 3 14.4 3 6a2 2 0 0 1 1-2z"/></svg>
         0312 267 12 28
       </a>
+      <div class="lang-switch">
+        <button type="button" class="lang-switch-btn" aria-haspopup="true" aria-expanded="false">
+          <span class="lang-flag" aria-hidden="true">🇹🇷</span>
+          <span class="lang-code">TR</span>
+          <svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" role="menu">
+          <button type="button" class="lang-option is-active" role="menuitem" data-lang="tr"><span aria-hidden="true">🇹🇷</span> Türkçe</button>
+          <button type="button" class="lang-option" role="menuitem" data-lang="en"><span aria-hidden="true">🇬🇧</span> English</button>
+        </div>
+      </div>
       <a href="iletisim.html" class="btn btn--primary btn--sm">Teklif Alın</a>
       <button class="nav-toggle" aria-label="Menü" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -41,40 +52,91 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="hero-badge"><span class="dot">30+</span> 1993'ten bu yana yapı aksesuarında üretim</div>
-      <h1>Kapı ve pencerenize <em>güvenilir</em> dokunuşu biz sağlıyoruz</h1>
-      <p class="lead">PVC, ahşap ve alüminyum doğrama sistemleri için kapı kolu, pencere kolu, sürme sistem ve tutamak üretiyoruz. Kendi kalıphanemiz ve tam otomatik üretim hattımızla ISO 9001 ve TSE standartlarında, Avrupa'ya ihraç edilen kalite.</p>
-      <div class="hero-actions">
-        <a href="urunler.html" class="btn btn--primary">
-          Ürünlerimizi İnceleyin
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="iletisim.html" class="btn btn--ghost">Teklif Alın</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><b>1993</b><span>Kuruluş Yılı</span></div>
-        <div class="stat"><b>ISO 9001</b><span>Kalite Belgesi</span></div>
-        <div class="stat"><b>4</b><span>Ana Ürün Grubu</span></div>
-        <div class="stat"><b>AB</b><span>İhracat Pazarı</span></div>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="ring r1"></div>
-      <div class="ring r2"></div>
-      <div class="plate">
-        <img src="assets/urun-bati.webp" alt="İmat Batı serisi kapı kolu" width="900" height="506">
-      </div>
-      <div class="hero-float f1">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.6 6.6L22 9.3l-5.4 4.7L18.2 21 12 17.3 5.8 21l1.6-7-5.4-4.7 7.4-.7z"/></svg>
-        TSE &amp; ISO 9001
-      </div>
-      <div class="hero-float f2">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 4 5.6 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.6-4-9s1.5-6.5 4-9z"/></svg>
-        Avrupa'ya İhracat
+  <div class="hero-media">
+    <img src="assets/hero.webp" alt="İmat aksesuarlarının kullanıldığı modern konut cephesi" width="1920" height="1080">
+    <div class="hero-scrim"></div>
+  </div>
+
+  <div class="hero-hotspots" aria-hidden="false">
+    <!-- Giriş kapısı -->
+    <div class="hotspot" style="--x:48%; --y:64%;">
+      <button class="hotspot-pin" aria-expanded="false" aria-controls="hs-kapi">
+        <span class="pin-dot"></span>
+        <span class="pin-label">Giriş Kapısı</span>
+      </button>
+      <div class="hotspot-card" id="hs-kapi">
+        <div class="hs-thumb"><img src="assets/ev-kapi.png" alt="İmat kapı kolu" loading="lazy"></div>
+        <div class="hs-body">
+          <span class="hs-tag">Kapı Kolları</span>
+          <h3>Girişte İlk İzlenim</h3>
+          <p>Fonksiyonelliği modern tasarımla buluşturan, farklı mekan ve malzeme seçeneklerine uygun kapı kolu çözümleri.</p>
+          <a href="urunler.html#kapi-kollari">Kapı Kollarını Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
       </div>
     </div>
+
+    <!-- Teras / sürme sistem -->
+    <div class="hotspot" style="--x:66%; --y:47%;">
+      <button class="hotspot-pin" aria-expanded="false" aria-controls="hs-surme">
+        <span class="pin-dot"></span>
+        <span class="pin-label">Teras Sürme Sistem</span>
+      </button>
+      <div class="hotspot-card" id="hs-surme">
+        <div class="hs-thumb"><img src="assets/urun-surme.webp" alt="İmat sürme sistem kolu" loading="lazy"></div>
+        <div class="hs-body">
+          <span class="hs-tag">Sürme &amp; Alüminyum Sistem</span>
+          <h3>Hareketin Konforlu Hali</h3>
+          <p>Sürme sistemleri için ergonomik tutuş, şık görünüm ve günlük kullanım konforunu bir araya getiren çözümler.</p>
+          <a href="urunler.html#surme-sistem">Sürme Sistemlerini Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Üst kat penceresi -->
+    <div class="hotspot flip" style="--x:85%; --y:40%;">
+      <button class="hotspot-pin" aria-expanded="false" aria-controls="hs-pencere">
+        <span class="pin-dot"></span>
+        <span class="pin-label">Üst Kat Penceresi</span>
+      </button>
+      <div class="hotspot-card" id="hs-pencere">
+        <div class="hs-thumb"><img src="assets/ev-pencere-2.png" alt="İmat pencere kolu" loading="lazy"></div>
+        <div class="hs-body">
+          <span class="hs-tag">Pencere Kolları</span>
+          <h3>Her Pencerede Kusursuz Uyum</h3>
+          <p>PVC, ahşap ve alüminyum doğrama sistemleri için estetik ve işlevsel pencere kolu çözümleri.</p>
+          <a href="urunler.html#pencere-kollari">Pencere Kollarını Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-spotlight" aria-hidden="true"></div>
+
+  <div class="container hero-content">
+    <div class="hero-badge"><span class="dot">✓</span> 1993'ten Bugüne Üretim</div>
+    <h1>Detaylarda <em>Fark Yaratmak</em><br>İçin Tasarlandı.</h1>
+    <p class="lead">Kapı, pencere ve sürme sistemleri için estetik, fonksiyonel ve güvenilir aksesuar çözümleri.</p>
+    <div class="hero-actions">
+      <a href="urunler.html" class="btn btn--primary">
+        Ürünleri Keşfet
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="hakkimizda.html" class="btn btn--ghost">İmat'ı Tanıyın</a>
+    </div>
+    <p class="hero-hint">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.5a3 3 0 1 1 6 0c0 2-3 2.5-3 4.5"/><circle cx="12" cy="19" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="9"/></svg>
+      Ürünü görmek için görsel üzerindeki noktalara dokunun.
+    </p>
+  </div>
+</section>
+
+<!-- HERO STATS -->
+<section class="hero-stats-strip">
+  <div class="container">
+    <div class="stat"><b>1993</b><span>Üretimden Bugüne</span></div>
+    <div class="stat"><b>4</b><span>Ana Ürün Grubu</span></div>
+    <div class="stat"><b>ISO 9001</b><span>Kalite Standardı</span></div>
+    <div class="stat"><b>GLOBAL</b><span>Pazarlara Ulaşan Üretim</span></div>
   </div>
 </section>
 
@@ -82,16 +144,16 @@
 <section class="section">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">Ürün Gruplarımız</div>
-      <h2>Doğramanızın her noktası için doğru aksesuar</h2>
-      <p>Kapı kolundan sürme sistem tutamaklarına kadar dört ana ürün grubuyla PVC, ahşap ve alüminyum doğramalara uyumlu çözümler sunuyoruz.</p>
+      <div class="eyebrow">Çözüm Alanlarımız</div>
+      <h2>Her Açılışta, Her Dokunuşta İmat.</h2>
+      <p>Kapıdan pencereye, sürme sistemlerden tamamlayıcı aksesuarlara kadar farklı doğrama sistemleri için tasarlanmış çözümler.</p>
     </div>
     <div class="grid-4">
       <div class="product-card reveal">
         <div class="thumb"><img src="assets/urun-kapi-kolu.webp" alt="İmat kapı kolu" loading="lazy"></div>
         <div class="card-body">
           <h3>Kapı Kolları</h3>
-          <p>Farklı malzeme ve mekânlara uygun, modern ve dayanıklı kapı kolu çözümleri.</p>
+          <p>Girişlerden iç mekanlara kadar farklı kullanım alanları için estetik ve dayanıklı kol çözümleri.</p>
           <a href="urunler.html#kapi-kollari" class="card-link">Ürünleri Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
@@ -99,15 +161,15 @@
         <div class="thumb"><img src="assets/urun-pencere-kolu.webp" alt="İmat pencere kolu" loading="lazy"></div>
         <div class="card-body">
           <h3>Pencere Kolları</h3>
-          <p>PVC ve ahşap pencere sistemleri için ergonomik, uzun ömürlü kol modelleri.</p>
+          <p>Farklı doğrama sistemleriyle uyum sağlayan, ergonomi ve tasarımı bir araya getiren çözümler.</p>
           <a href="urunler.html#pencere-kollari" class="card-link">Ürünleri Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
       <div class="product-card reveal">
         <div class="thumb"><img src="assets/urun-surme.webp" alt="İmat sürme sistem kolu" loading="lazy"></div>
         <div class="card-body">
-          <h3>Sürme ve Alüminyum Sistem</h3>
-          <p>Sürgülü sistemlere özel, ergonomik tutuş sağlayan şık ve kullanışlı kollar.</p>
+          <h3>Sürme &amp; Alüminyum Sistem</h3>
+          <p>Sürgülü sistemlerde akıcı kullanım ve ergonomik tutuş için geliştirilmiş çözümler.</p>
           <a href="urunler.html#surme-sistem" class="card-link">Ürünleri Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
@@ -115,7 +177,7 @@
         <div class="thumb"><img src="assets/urun-tutamak.webp" alt="İmat tutamak ve rozet" loading="lazy"></div>
         <div class="card-body">
           <h3>Tutamak &amp; Rozetler</h3>
-          <p>Sürme sistemler için şık tasarımlı tutamak ve rozet çözümleri.</p>
+          <p>Detayları tamamlayan, farklı uygulamalara uyum sağlayan tamamlayıcı aksesuarlar.</p>
           <a href="urunler.html#tutamak-rozetler" class="card-link">Ürünleri Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
@@ -123,44 +185,34 @@
   </div>
 </section>
 
-<!-- NEDEN İMAT -->
+<!-- İMAT'IN FARKI -->
 <section class="section section--dark">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">Neden İmat Aksesuar</div>
-      <h2>Üretimden ihracata uçtan uca kontrol</h2>
-      <p>Kalıp tasarımından metal işlemeye, kendi bünyemizde yürüttüğümüz üretim süreçleriyle kaliteyi baştan sona kendimiz garanti ediyoruz.</p>
+      <div class="eyebrow">Neden İmat?</div>
+      <h2>30 Yılı Aşan Üretim Deneyimi. Bugünün İhtiyaçlarına Göre Gelişen Bir Marka.</h2>
+      <p>1993'ten bu yana değişen ihtiyaçları takip ediyor, üretim deneyimimizi modern tasarım ve sürekli gelişim anlayışıyla birleştiriyoruz.</p>
     </div>
-    <div class="grid-3">
-      <div class="feature-card reveal">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></div>
-        <h3>Kendi Kalıp ve Döküm Üretimi</h3>
-        <p>1995'te kurulan kalıphanemiz ve metal döküm bölümümüzle tasarımdan üretime tüm süreç kontrolümüzde.</p>
-      </div>
-      <div class="feature-card reveal">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></div>
-        <h3>Tam Otomatik Üretim Hattı</h3>
-        <p>Alman teknik iş birliğiyle kurulan otomatik ispanyolet üretim hattı, kesintisiz ve standart üretim sağlar.</p>
-      </div>
+    <div class="grid-4">
       <div class="feature-card reveal">
         <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.6 6.6L22 9.3l-5.4 4.7L18.2 21 12 17.3 5.8 21l1.6-7-5.4-4.7 7.4-.7z"/></svg></div>
-        <h3>ISO 9001 Kalite Yönetimi</h3>
-        <p>ISO 9001:2015 ve TSE belgeli üretim süreçleriyle her partide aynı kalite standardını garanti ediyoruz.</p>
+        <h3>Kaliteye Bağlılık</h3>
+        <p>Her aşamada kalite standartlarını koruyarak uzun ömürlü ve güvenilir çözümler sunuyoruz.</p>
       </div>
       <div class="feature-card reveal">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 4 5.6 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.6-4-9s1.5-6.5 4-9z"/></svg></div>
-        <h3>Avrupa'ya İhracat</h3>
-        <p>Üretimimizin önemli bir bölümünü başta Almanya olmak üzere Avrupa pazarlarına ihraç ediyoruz.</p>
-      </div>
-      <div class="feature-card reveal">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h5v-2a4 4 0 0 0-3-3.87M9 20H4v-2a4 4 0 0 1 3-3.87m5-4.13a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm7 4a4 4 0 1 0-8 0"/></svg></div>
-        <h3>Alman Teknik İş Birliği</h3>
-        <p>1997'de kurulan metal işleme bölümümüz Alman teknik ortaklığıyla hayata geçirildi.</p>
+        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8M21 7h-6M21 7v6"/></svg></div>
+        <h3>Sürekli Gelişim</h3>
+        <p>Üretim tekniklerimizi ve ürünlerimizi sürekli geliştirerek sektörün değişen ihtiyaçlarına uyum sağlıyoruz.</p>
       </div>
       <div class="feature-card reveal">
         <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
-        <h3>Müşteri Odaklı Yaklaşım</h3>
-        <p>İş ortaklarımızla kurduğumuz güçlü ilişkiler ve hızlı çözüm anlayışıyla güven yaratıyoruz.</p>
+        <h3>Müşteri Memnuniyeti</h3>
+        <p>İş ortaklarımızla uzun vadeli ilişkiler kuruyor, beklentileri karşılayan çözümler geliştirmeye odaklanıyoruz.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z"/></svg></div>
+        <h3>Sorumluluk &amp; Güven</h3>
+        <p>Üretimden iş ortaklıklarımıza kadar güvenilir, sorumlu ve sürdürülebilir bir yaklaşım benimsiyoruz.</p>
       </div>
     </div>
   </div>
@@ -170,18 +222,14 @@
 <section class="section">
   <div class="container">
     <div class="split">
-      <div class="reveal">
-        <div class="eyebrow">1993'ten Bugüne</div>
-        <h2 style="font-size:32px;margin-bottom:18px;">Menteşe ve koldan başlayan hikaye, bugün Avrupa'ya ihracata uzanıyor</h2>
-        <p style="color:var(--gray-500);font-size:16px;margin-bottom:26px;">PVC pencere sektörünün hızla geliştiği dönemde menteşe ve kol imalatıyla başladığımız üretim yolculuğumuzu, kendi kalıphanemiz, metal işleme ve döküm bölümlerimizle büyüttük. 2004'ten bu yana odağımız kapı ve pencere kolu üretiminde.</p>
-        <ul class="check-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 1995'te kurulan kendi kalıphanemiz</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> CAD/CAM destekli kalıp tasarım merkezi</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Alüminyum kapı ve pencere kolu üretimi</li>
-        </ul>
-        <a href="hakkimizda.html" class="btn btn--outline" style="margin-top:10px;">Hikayemizin Tamamı</a>
+      <div class="reveal reveal--left">
+        <div class="eyebrow">İmat Aksesuar</div>
+        <h2 style="font-size:32px;margin-bottom:18px;">1993'ten Bugüne, Üretimle Büyüyen Bir Hikâye.</h2>
+        <p style="color:var(--gray-500);font-size:16px;margin-bottom:26px;">İMAT Aksesuar, 1993 yılında PVC pencere sektörünün gelişen ihtiyaçlarına yönelik menteşe ve kol üretimiyle yola çıktı. Zaman içinde kalıp, metal işleme ve döküm alanlarında geliştirdiği üretim altyapısıyla ürün ve yetkinliklerini genişletti.</p>
+        <p style="color:var(--gray-500);font-size:16px;margin-bottom:26px;">2004 yılından itibaren odağını kapı ve pencere kollarına yoğunlaştıran İmat, bugün üretimini Avrupa başta olmak üzere farklı pazarlara sunuyor.</p>
+        <a href="hakkimizda.html" class="btn btn--outline" style="margin-top:10px;">Hikâyemizi Keşfedin</a>
       </div>
-      <div class="split-media reveal">
+      <div class="split-media reveal reveal--right">
         <img src="assets/fabrika.webp" alt="İmat Aksesuar üretim tesisi, Temelli / Ankara" loading="lazy">
         <div class="badge-chip"><div><b>1993</b><span>Kuruluş yılı</span></div></div>
       </div>
@@ -192,14 +240,20 @@
 <!-- SERTİFİKA TEASER -->
 <section class="section section--alt">
   <div class="container">
-    <div class="stats-strip reveal">
-      <div class="stat"><b>ISO 9001</b><span>Kalite Yönetim Sistemi</span></div>
-      <div class="stat"><b>TSE</b><span>Türk Standartları Belgesi</span></div>
-      <div class="stat"><b>PIV</b><span>Kilit Test Sertifikası</span></div>
-      <div class="stat"><b>1993</b><span>Kesintisiz Üretim</span></div>
+    <div class="section-head center reveal">
+      <div class="eyebrow">Kalite &amp; Güven</div>
+      <h2>Kalite Bir Hedef Değil, Üretim Standardımız.</h2>
+      <p>Üretim süreçlerimizi belirlediğimiz kalite standartları doğrultusunda sürekli geliştiriyor, ürünlerimizin güvenilirliğini korumaya odaklanıyoruz.</p>
+    </div>
+    <div class="stats-strip cols-5 reveal">
+      <div class="stat"><b>ISO 9001:2015</b><span>Kalite Yönetim Sistemi</span></div>
+      <div class="stat"><b>ISO 14001</b><span>Çevre Yönetim Sistemi</span></div>
+      <div class="stat"><b>TSE 13126</b><span>Türk Standartları Belgesi</span></div>
+      <div class="stat"><b>TSE 1906</b><span>Türk Standartları Belgesi</span></div>
+      <div class="stat"><b>PIV Test</b><span>Kilitli 100 Nm Sertifikası</span></div>
     </div>
     <div style="text-align:center;margin-top:32px;">
-      <a href="sertifikalar.html" class="btn btn--dark">Tüm Sertifikaları İnceleyin</a>
+      <a href="sertifikalar.html" class="btn btn--dark">Kalite Belgelerini Gör</a>
     </div>
   </div>
 </section>
@@ -209,12 +263,13 @@
   <div class="container">
     <div class="cta-banner reveal">
       <div>
-        <h2>Projeniz için doğru aksesuar çözümünü birlikte belirleyelim</h2>
-        <p>Ürün kataloğumuz, teknik detaylar ve fiyat teklifi için ekibimizle iletişime geçin.</p>
+        <div class="eyebrow">Birlikte Çalışalım</div>
+        <h2>Projeniz İçin Doğru Aksesuar Çözümünü Birlikte Bulalım.</h2>
+        <p>Ürünlerimiz hakkında bilgi almak veya ihtiyaçlarınıza uygun çözümü değerlendirmek için bizimle iletişime geçin.</p>
       </div>
       <div class="cta-actions">
-        <a href="iletisim.html" class="btn btn--primary">Teklif Alın</a>
-        <a href="tel:+903122671228" class="btn btn--ghost">0312 267 12 28</a>
+        <a href="iletisim.html" class="btn btn--primary">Bize Ulaşın</a>
+        <a href="urunler.html" class="btn btn--ghost">Ürünleri İncele</a>
       </div>
     </div>
   </div>
